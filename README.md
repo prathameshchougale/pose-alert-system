@@ -1,9 +1,9 @@
 🚨 Smart Pose Alert System
 
 A Python-based application that uses computer vision and machine learning to detect human poses in real time.
-When a dangerous or specified pose is held for a certain duration, the system triggers an alarm, saves snapshots, and logs the event.
+When a dangerous pose is held for a certain duration, the system triggers an alarm, saves snapshots, and logs the event.
 
-Built using OpenCV, MediaPipe, Threading, and Python.
+Built with OpenCV, MediaPipe, Threading, and Python.
 
 🚀 Features
 
@@ -15,11 +15,11 @@ Built using OpenCV, MediaPipe, Threading, and Python.
 
 📸 Automatic snapshot saving
 
-📝 Log file generation with timestamps
+📝 Event logging with timestamps
 
 📊 Real-time FPS display
 
-🎨 Skeleton overlay for landmarks
+🎨 Skeleton overlay for body landmarks
 
 ⏱️ Customizable alert duration
 
@@ -27,27 +27,35 @@ Built using OpenCV, MediaPipe, Threading, and Python.
 
 OpenCV – Image processing & webcam handling
 
-MediaPipe Pose – Pose estimation & landmarks
+MediaPipe Pose – Pose estimation & body landmarks
 
-Threading – For background alarm execution
+Threading – Background alarm execution
 
-DateTime – For snapshots & logging
+DateTime – Snapshot timestamps & logging
 
 Math – Angle-based pose calculations
 
 ⚙️ Setup Instructions
 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/prathameshchougale/pose-alert-system.git
 cd pose-alert-system
+```
 
 2️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 3️⃣ Manual Installation (Optional)
+```bash
 pip install opencv-python mediapipe numpy
+```
 
 4️⃣ Run the Application
+```bash
 python src/main.py
+```
 
 📋 Usage
 
@@ -59,49 +67,46 @@ If a dangerous pose is held for 3 seconds, alarm triggers
 
 Press q to exit
 
-After running, check:
+After running:
 
-logs/pose_alerts.log
+Check logs in logs/pose_alerts.log
 
-snapshots/ folder
+Check snapshots in snapshots/
 
 🎯 Detected Poses
 Pose Name	Description
 Standing	Normal upright posture
 Sitting	Bent knee sitting posture
-Hands Up (Surrender)	Both hands raised above shoulders
-Hand on Face	Hand close to face/nose
+Hands Up (Surrender)	Hands raised above shoulders
+Hand on Face	Hand close to face or nose
 Lying Down (Fall?)	Possible fall detected
-Unknown Pose	No known pattern matched
+Unknown Pose	Does not match known pattern
 📁 File Structure
 pose-alert-system/
 ├── src/
 │   ├── main.py                # Main application code
-│   ├── pose_detector.py       # Pose detection logic (optional modularization)
-│   ├── alarm.py               # Alarm functions (optional)
-│   └── utils.py               # Helper functions for saving logs/images
+│   ├── pose_detector.py       # Pose detection logic
+│   ├── alarm.py               # Alarm functions
+│   └── utils.py               # Helper functions
 │
-├── snapshots/                 # Auto-saved alerts (images)
-│
+├── snapshots/                 # Auto-saved snapshots
 ├── logs/
-│   └── pose_alerts.log        # Log file (generated automatically)
-│
+│   └── pose_alerts.log        # Auto-generated log file
 ├── docs/
-│   └── setup_guide.md         # Additional documentation (optional)
-│
-├── requirements.txt           # Required Python packages
-└── README.md                  # Project documentation
+│   └── setup_guide.md         # Extra documentation
+├── requirements.txt
+└── README.md
 
 ⚠️ Notes
 
-Ensure proper lighting for better pose detection
+Use good lighting for accurate pose detection
 
-Camera must have a clear view of full body
+Camera should clearly see your full body
 
 Avoid cluttered backgrounds
 
-False positives may occur if:
+False positives may occur when:
 
-   Only half the body is visible
-
-   Multiple people enter the frame
+   Only half-body is visible
+   
+   Multiple people in the frame
