@@ -27,24 +27,24 @@ Built with **OpenCV**, **MediaPipe**, **Threading**, and **Python**.
 - **Math** – Angle-based pose calculations  
 
 
-##⚙️ Setup Instructions
-###1️⃣ Clone the Repository
+## ⚙️ Setup Instructions
+### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/prathameshchougale/pose-alert-system.git
 cd pose-alert-system
 ```
 
-###2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-###3️⃣ Manual Installation (Optional)
+### 3️⃣ Manual Installation (Optional)
 ```bash
 pip install opencv-python mediapipe numpy
 ```
 
-###4️⃣ Run the Application
+### 4️⃣ Run the Application
 ```bash
 python src/main.py
 ```
@@ -72,16 +72,9 @@ python src/main.py
 - **Unknown Pose**
   - Does not match known pattern
 
-## 📁 File Structure
-🎯 Detected Poses
-Pose Name	Description
-Standing	Normal upright posture
-Sitting	Bent knee sitting posture
-Hands Up (Surrender)	Hands raised above shoulders
-Hand on Face	Hand close to face or nose
-Lying Down (Fall?)	Possible fall detected
-Unknown Pose	Does not match known pattern
-📁 File Structure
+## 📁 **File Structure**
+
+```
 pose-alert-system/
 ├── src/
 │   ├── main.py                # Main application code
@@ -96,6 +89,8 @@ pose-alert-system/
 │   └── setup_guide.md         # Extra documentation
 ├── requirements.txt
 └── README.md
+```
+
 
 
 
