@@ -1,0 +1,40 @@
+
+# Python Cache & Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Logs & Snapshots
+logs/
+*.log
+snapshots/
+*.jpg
+*.png
+
+# IDE / Editor Folders
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build / Distribution
+
+build/
+dist/
+*.spec
+
+# Python Packaging
+*.egg-info/
+.eggs/
+
+# Misc
+*.tmp
+*.bak
